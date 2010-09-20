@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @enquesta.title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @enquesta.body %>
+</p>
+
+
+<%= link_to 'Edit', edit_enquesta_path(@enquesta) %> |
+<%= link_to 'Back', enquestas_path %>
