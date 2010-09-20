@@ -1,11 +1,10 @@
 class CommentsController < ApplicationController
-	before_filter :authenticate, :except => [:index, :show]
+	before_filter :authenticate_user!, :except => [:index, :show]
 	def create
 		@post=Post.find(params[:post_id])
 		flash[:notice] = "Gracies pel comentari!"
 		@comment = @post.comments.create!(params[:comment])
    flash[:notice] = "Thanks for commenting!"
-		debugger
 		respond_to do |format|
 			format.html { redirect_to @post }
 			format.js

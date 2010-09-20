@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-	before_filter :authenticate_admin!, :except => [:sign_in, :sign_out, :sign_up]
+	#before_filter :authenticate_admin!, :except => [:sign_in, :sign_out, :sign_up]
   uses_tiny_mce :options => {
                               :theme => 'advanced',
                               :plugins => %w{ table fullscreen }

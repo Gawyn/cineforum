@@ -1,0 +1,11 @@
+#sidebar
+{
+	float:right;
+	display:inline;
+	width:150px;
+}
+#main
+{
+	float:left;
+	margin-left:150px;
+}

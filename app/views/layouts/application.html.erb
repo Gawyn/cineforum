@@ -8,12 +8,16 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+<div style="background-image: url(images/fons.jpg); height:260px; width:100%">
 
-<div width:100%; height:250px>
-<img src="images/cineforum3.jpg">
+<center><img src="images/cineforum4.jpg"></center>
+
+</div>
+<div id=main style="width:50%">
+<%= yield %>
 </div>
 
-<%= yield %>
+<%= render "shared/sidebar" %>
 
 </body>
 </html>

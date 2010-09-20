@@ -3,11 +3,11 @@ Cineforum::Application.routes.draw do
   resources :portadas
 
   resources :films
-
+  devise_for :users, :as => "users", :path_names => { :sign_in => 'login', :sign_out => 'logout', :sign_up => 'register', :password => 'secret', :confirmation => 'verification', :unlock => 'unblock' }
+	resources :users
 devise_for :admins, :as => "admins", :path_names => { :sign_in => 'login', :sign_out => 'logout', :sign_up=> 'register' }
    root :to => 'posts#index' 
 	resources :admins	
-register_user_path = 'users#register'
 	resources :films do
 		collection do
 			put 'upload'
@@ -20,8 +20,10 @@ register_user_path = 'users#register'
 	resources :posts
   resources :posts do resources :comments
 end
-  devise_for :users, :as => "users", :path_names => { :sign_in => 'login', :sign_out => 'logout', :sign_up => 'register', :password => 'secret', :confirmation => 'verification', :unlock => 'unblock' }
-	resources :users
+
+match 'register_user', :to => 'users#register', :as => :register_user
+match 'login_user', :to => 'users#login', :as => :login_user
+
 
 
   # The priority is based upon order of creation:

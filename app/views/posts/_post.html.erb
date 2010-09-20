@@ -1,5 +1,6 @@
 <%= div_for post do %>
-<h2><%= link_to_unless_current h(post.title), post %></h2>
-<%= simple_format h(post.body) %>
+<h2><%= link_to_unless_current h(post.title), post %></h2><br>
+Postejat <%= (post.created_at) %>
+<%= simple_format (post.body) %>
 <% end %>
 

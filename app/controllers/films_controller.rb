@@ -1,4 +1,5 @@
 class FilmsController < ApplicationController
+	before_filter :authenticate_admin!, :except => [:index, :show]
   # GET /films
   # GET /films.xml
   uses_tiny_mce :options => {
