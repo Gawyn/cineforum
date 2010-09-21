@@ -1,0 +1,7 @@
+<%= div_for film do %>
+<h2><%= link_to_unless_current h(film.title), film %></h2><br>
+<%= h(film.director) %><br>
+<%= h(film.actors) %><br>
+<%= simple_format (film.body) %>
+<% end %>
+

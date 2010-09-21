@@ -1,0 +1,6 @@
+<%= div_for enquesta do %>
+<h2><%= link_to_unless_current h(enquesta.title), enquesta %></h2><br>
+Postejat <%= (enquesta.created_at) %>
+<%= simple_format (enquesta.body) %>
+<% end %>
+

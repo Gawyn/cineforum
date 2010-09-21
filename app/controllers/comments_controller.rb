@@ -3,7 +3,9 @@ class CommentsController < ApplicationController
 	def create
 		@post=Post.find(params[:post_id])
 		flash[:notice] = "Gracies pel comentari!"
-		@comment = @post.comments.create!(params[:comment])
+		  params[:comment][:user_id] = current_user.id
+		  @comment = @post.comments.build(params[:comment])
+		@comment.save
    flash[:notice] = "Thanks for commenting!"
 		respond_to do |format|
 			format.html { redirect_to @post }
@@ -20,4 +22,13 @@ class CommentsController < ApplicationController
 		format.atom
 	    end
 	  end
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+
+    respond_to do |format|
+      format.html { redirect_to(posts_url) }
+      format.xml  { head :ok }
+    end
+  end
 end

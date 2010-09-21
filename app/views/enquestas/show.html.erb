@@ -1,15 +1,7 @@
-<p id="notice"><%= notice %></p>
+<%= render :partial => @enquesta %>
 
-<p>
-  <b>Title:</b>
-  <%= @enquesta.title %>
-</p>
-
-<p>
-  <b>Body:</b>
-  <%= @enquesta.body %>
-</p>
-
-
+<% if admin_signed_in? %>
 <%= link_to 'Edit', edit_enquesta_path(@enquesta) %> |
+<%= link_to 'Destroy', @enquesta, :method => :delete, :confirm => "Are you sure?" %> |
 <%= link_to 'Back', enquestas_path %>
+<% end %>

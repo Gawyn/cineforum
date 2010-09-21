@@ -2,10 +2,18 @@
 {
 	float:right;
 	display:inline;
-	width:150px;
+	position: absolute;
+	right:0;
+	width:100px;
+	height:100%;
 }
 #main
 {
+	height:100%;
 	float:left;
 	margin-left:150px;
+}
+#header
+{
+	background-image: url(../images/fons.jpg);
 }
