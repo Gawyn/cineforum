@@ -1,10 +1,13 @@
 #sidebar
 {
+	background-image: url(../images/linea.jpg);
+	background-repeat:repeat-y;
 	float:right;
+	text-align: right;
 	display:inline;
 	position: absolute;
-	right:0;
-	width:100px;
+	margin-right: 30px;
+	right: 0px;
 	height:100%;
 }
 #main

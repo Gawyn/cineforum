@@ -1,6 +1,8 @@
 <div id="sidebar">
-<p><%= current_user.name %></p>
+<% if user_signed_in? %>
+Logged as <p><%= current_user.name %></p>
 <hr>
+<% end %>
 <p><%= link_to "Enquestes", enquestas_path %></p>
 <p><%= link_to "Films", films_path %></p>
 <p><%= link_to "Posts", posts_path %></p>
