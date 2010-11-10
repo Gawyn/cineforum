@@ -1,9 +1,3 @@
-GIT
-  remote: git://github.com/krishna-shilpakar/web-app-theme.git
-  revision: 488fae1b233bb6f00a0c28340313e8e34305f589
-  specs:
-    web-app-theme (0.5.3)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -36,6 +30,10 @@ GEM
     activesupport (3.0.0)
     arel (1.0.1)
       activesupport (~> 3.0.0)
+    aws-s3 (0.6.2)
+      builder
+      mime-types
+      xml-simple
     bcrypt-ruby (2.1.2)
     builder (2.1.2)
     columnize (0.3.1)
@@ -87,15 +85,16 @@ GEM
     tzinfo (0.3.23)
     warden (0.10.7)
       rack (>= 1.0.0)
+    xml-simple (1.0.12)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-s3
   devise
   paperclip
   rails (= 3.0.0)
   ruby-debug
   sqlite3-ruby
   tiny_mce
-  web-app-theme!

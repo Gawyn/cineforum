@@ -1,21 +1,29 @@
+<h1>Listing films</h1>
+
 <table>
   <tr>
-    <th>Títol</th>
+    <th>Title</th>
     <th>Director</th>
-    <th>Any</th>
+    <th>Year</th>
+    <th>Country</th>
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
 
 <% @films.each do |film| %>
   <tr>
-<td><%= link_to_unless_current h(film.title), film %></td>
+    <td><%= film.title %></td>
     <td><%= film.director %></td>
     <td><%= film.year %></td>
+    <td><%= film.country %></td>
+    <td><%= link_to 'Show', film %></td>
+    <td><%= link_to 'Edit', edit_film_path(film) %></td>
+    <td><%= link_to 'Destroy', film, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<% if admin_signed_in? %>
 <%= link_to 'New Film', new_film_path %>
-<% end %>

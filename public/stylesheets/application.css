@@ -1,22 +1,68 @@
-#sidebar
-{
-	background-image: url(../images/linea.jpg);
-	background-repeat:repeat-y;
-	float:right;
-	text-align: right;
-	display:inline;
-	position: absolute;
-	margin-right: 30px;
-	right: 0px;
-	height:100%;
+#contenedortotal{
+	margin: 0 auto;
+	height: 100%;
 }
-#main
+#contenedorweb{
+	margin: 0 auto;
+	height: 100%;
+	width:960px;
+}
+#container2 {
+
+	position:relative;
+	float:left;
+	width:100%;
+	background-color: #BBB;
+	right: 200px;
+}
+#container1 {
+	float:left;
+	width:100%;
+	position:relative;
+	overflow:hidden;
+	right:0px;
+	background-color: #000;
+}
+#columnaizq
 {
+	overflow: hidden;
 	height:100%;
 	float:left;
-	margin-left:150px;
+	padding-left:15px;
+	padding-right:15px;
+	left: 230px;
+	width: 680px;
+	position:relative;
 }
-#header
+#lateral
 {
-	background-image: url(../images/fons.jpg);
+	background-color: #000;
+	float:right;
+	width: 200px;
+	text-align: right;
+	display:inline;
+	position: relative;
+	height:100%;
+	left: 200px;
+}
+#cap
+{
+	height: 270px;
+	width: 960px;
+	background-color: #000;
+}
+#headermiddle{
+	height: 200px;
+}
+#headertop
+{
+	height: 30px;
+	background-image: url(../images/pelicula.jpg);
+	background-repeat: repeat-x;
+}
+#headerbottom
+{
+	height: 30px;
+	background-image: url(../images/pelicula.jpg);
+	background-repeat: repeat-x;
 }
