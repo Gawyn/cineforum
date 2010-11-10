@@ -1,7 +1,7 @@
 class PortadasController < ApplicationController
   def index
-	@sesions= Sesion.all
-	@noticias= Noticia.all
+	@sesions= Sesion.find(:all, :conditions => {:portada => true}, :order => "created_at DESC")
+	@noticias= Noticia.find(:all, :conditions => {:portada => true}, :order => "created_at DESC")
 	@total=@noticias+@sesions
     respond_to do |format|
       format.html # index.html.erb

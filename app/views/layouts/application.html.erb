@@ -16,21 +16,15 @@
 <div id=contenedortotal>
 <div id=contenedorweb>
 <div id=cap>
-<div id=headertop></div>
 <div id=headermiddle>
 <center><%= link_to image_tag("cineforum4.jpg", :style => "align:middle;"), portadas_path %></center>
 </div>
 <div id=headerbottom></div>
+<%= render "shared/topbar" %>
 </div>
-<div id=container1>
-<div id=container2>
-<div id=columnaizq>
+<div id=headerbottom></div>
+<div id=cuerpogeneral>
 <%= yield %>
-</div>
-
-
-<%= render "shared/sidebar" %>
-</div>
 </div>
 </div>
 </div>

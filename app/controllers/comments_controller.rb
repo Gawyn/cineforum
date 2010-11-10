@@ -1,12 +1,17 @@
 class CommentsController < ApplicationController
-	before_filter :authenticate_user!, :except => [:index, :show]
 	def create
-		@post=Post.find(params[:post_id])
 		flash[:notice] = "Gracies pel comentari!"
-		  params[:comment][:user_id] = current_user.id
-		  @comment = @post.comments.build(params[:comment])
+		if (params[:sesion_id]== nil )
+			@noticia=Noticia.find(params[:noticia_id])
+			@comment = @noticia.comments.build(params[:comment])
+		else
+			if (params[:noticia_id]== nil)
+			@sesion=Sesion.find(params[:sesion_id])
+			@comment = @sesion.comments.build(params[:comment])
+			end
+		end
+		@comment.user_id=current_user.id
 		@comment.save
-   flash[:notice] = "Thanks for commenting!"
 		respond_to do |format|
 			format.html { redirect_to @post }
 			format.js

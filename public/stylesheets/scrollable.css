@@ -1,10 +1,8 @@
 /* main vertical scroll */
-
-
 	#mainscroll {
 		position:relative;
 		overflow:hidden;
-		height: 550px;
+		height:700px;
 	}
 	
 	/* root element for pages */
@@ -16,17 +14,17 @@
 	/* single page */
 	.page {
 		padding-left:0px;
-		height: 550px;
+		height:700px;
 		background:#BBB;
-		width:680px;
+		width:900px;
 	}
 	
 	/* root element for horizontal scrollables */
 	.scrollable {
 		position:relative;
 		overflow:hidden;
-		width: 680px;
-		height: 550px;
+		width:900px;
+		height:700px;
 	}
 	
 	/* root element for scrollable items */
@@ -40,8 +38,8 @@
 	.item {
 		float:left;
 		cursor:pointer;
-		width:680px;
-		height:550px;
+		width:900px;
+		height:700px;
 		padding-left: 0px;
 	}
 	

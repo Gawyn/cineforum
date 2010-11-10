@@ -2,9 +2,6 @@ Cineforum::Application.routes.draw do
 
   resources :films
 
-  resources :sesions
-
-  resources :noticias
 	
 	resources :comments	
 resources :portadas  
@@ -12,7 +9,10 @@ devise_for :users, :as => "users", :path_names => { :sign_in => 'login', :sign_o
 	resources :users
 devise_for :admins, :as => "admins", :path_names => { :sign_in => 'login', :sign_out => 'logout', :sign_up=> 'register' }
    root :to => 'portadas#index' 
-
+  resources :sesions do resources :comments
+	end
+  resources :noticias do resources :comments
+	end
 match 'register_user', :to => 'users#register', :as => :register_user
 match 'login_user', :to => 'users#login', :as => :login_user
 
