@@ -4,7 +4,7 @@
 		<table align="center">
 		<tr>
 		<% @noticias.each do |e| %>
-			<td><%= link_to image_tag(e.image.url, :title => '<i>'+e.title+'</i>', :size => "300x200"), e %><br>
+			<td><%= link_to image_tag(e.image.url, :title => '<i>'+e.title+'</i>', :size => "420x280"), e %><br>
 <% if admin_signed_in? %><%= link_to 'Destroy', e, :method => :delete, :confirm => "Are you sure?" %>
 <% else %>
 <br>

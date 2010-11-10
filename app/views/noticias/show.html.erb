@@ -2,5 +2,21 @@
 <center><strong><%= raw(@noticia.title) %></strong></center>
 <br>
   <%= raw(@noticia.body) %>
-
 <br>
+<div id="comments">
+	<%= render :partial => @noticia.comments %>
+</div>
+<% if user_signed_in? %>
+<% form_for ([@noticia, Comment.new], :remote => true) do |f| %>
+	<p>
+		<%= f.label :body, "New Comment" %><br />
+		<%= f.text_area :body %><br>
+	</p>
+	<p><%= f.submit "Add Comment" %></p>
+<% end %>
+<% else %>
+<br>
+Si vols fer comentaris, registra't!
+<br>
+<% end %>
+

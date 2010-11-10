@@ -8,7 +8,6 @@
 	width:960px;
 }
 #container2 {
-
 	position:relative;
 	float:left;
 	width:100%;
@@ -23,16 +22,15 @@
 	right:0px;
 	background-color: #000;
 }
-#columnaizq
+#cuerpogeneral
 {
 	overflow: hidden;
 	height:100%;
 	float:left;
-	padding-left:15px;
-	padding-right:15px;
-	left: 230px;
-	width: 680px;
-	position:relative;
+	padding-left:30px;
+	padding-right:30px;
+	background-color: #BBB;
+	width: 900px;
 }
 #lateral
 {
@@ -45,9 +43,15 @@
 	height:100%;
 	left: 200px;
 }
+#topmenu
+{
+	height:60px;
+	text-align:center;
+	background-color: #000;
+}
 #cap
 {
-	height: 270px;
+	height: 290px;
 	width: 960px;
 	background-color: #000;
 }

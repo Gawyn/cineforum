@@ -2,5 +2,20 @@
 <center><strong><%= raw(@sesion.title) %></strong></center>
 <br>
   <%= raw(@sesion.body) %>
-
 <br>
+<div id="comments">
+	<%= render :partial => @sesion.comments %>
+</div>
+<% if user_signed_in? %>
+<% form_for ([@sesion, Comment.new], :remote => true) do |f| %>
+	<p>
+		<%= f.label :body, "New Comment" %><br />
+		<%= f.text_area :body %><br>
+	</p>
+	<p><%= f.submit "Add Comment" %></p>
+<% end %>
+<% else %>
+<br>
+Si vols fer comentaris, registra't!
+<br>
+<% end %>

@@ -1,7 +1,0 @@
-<%= render :partial => @enquesta %>
-
-<% if admin_signed_in? %>
-<%= link_to 'Edit', edit_enquesta_path(@enquesta) %> |
-<%= link_to 'Destroy', @enquesta, :method => :delete, :confirm => "Are you sure?" %> |
-<%= link_to 'Back', enquestas_path %>
-<% end %>
