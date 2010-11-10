@@ -1,0 +1,11 @@
+<div id="topmenu">
+<%= link_to image_tag("cineforummenu.png"), sesions_path %>
+<%= link_to image_tag("noticiesmenu.png"), noticias_path %>
+<%= link_to image_tag("registermenu.png"), new_user_registration_path %></p>
+<% if user_signed_in? == false %>
+<%= link_to image_tag("loginmenu.png"), new_user_session_path %>
+<% end %>
+<% if user_signed_in? %>
+<%= link_to image_tag("logoutmenu.png"), destroy_user_session_path %>
+<% end %>
+</div>
