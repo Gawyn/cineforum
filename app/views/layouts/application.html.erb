@@ -2,21 +2,37 @@
 <html>
 <head>
   <title>Cinefòrum.CAT</title>
-  <%= include_tiny_mce_if_needed %>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
+
+<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" %>
+<%= stylesheet_link_tag 'application', 'scrollable', 'web_app_theme'%>
   <%= csrf_meta_tag %>
+
+<%= javascript_include_tag "http://cdn.jquerytools.org/1.2.5/full/jquery.tools.min.js" %>
+
+<%= javascript_include_tag "jquery-rails" %>
+  <%= include_tiny_mce_if_needed %>
 </head>
 <body>
-<div>
-<div id=header style="height:260px">
-<center><%= image_tag("cineforum4.jpg", :style => "align:middle;") %></center>
+<div id=contenedortotal>
+<div id=contenedorweb>
+<div id=cap>
+<div id=headertop></div>
+<div id=headermiddle>
+<center><%= link_to image_tag("cineforum4.jpg", :style => "align:middle;"), portadas_path %></center>
 </div>
-<div id=main style="width:600px">
+<div id=headerbottom></div>
+</div>
+<div id=container1>
+<div id=container2>
+<div id=columnaizq>
 <%= yield %>
 </div>
 
+
 <%= render "shared/sidebar" %>
+</div>
+</div>
+</div>
 </div>
 </body>
 </html>

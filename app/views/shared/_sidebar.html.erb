@@ -1,26 +1,24 @@
-<div id="sidebar">
+<div id="lateral">
 <% if user_signed_in? %>
 Logged as <p><%= current_user.name %></p>
 <hr>
 <% end %>
-<p><%= link_to "Enquestes", enquestas_path %></p>
-<p><%= link_to "Films", films_path %></p>
-<p><%= link_to "Posts", posts_path %></p>
+<p><%= link_to image_tag("cineforummenu.png"), sesions_path %></p>
+<p><%= link_to image_tag("filmsmenu.png"), films_path %></p>
+<p><%= link_to image_tag("noticiesmenu.png"), noticias_path %></p>
 <% if admin_signed_in? %>
 <p><%= link_to "Gestiona comments", comments_path %></p>
-<% end %>
+<% end %><br><br>
 <hr>
-<p><%= link_to "Registrar-se", new_user_registration_path %></p>
+<p><%= link_to image_tag("registermenu.png"), new_user_registration_path %></p>
 <% if user_signed_in? == false %>
-<p><%= link_to "Login", new_user_session_path %></p>
+<p><%= link_to image_tag("loginmenu.png"), new_user_session_path %></p>
 <% end %>
 <% if user_signed_in? %>
-<p><%= link_to "Logout", destroy_user_session_path %></p> 
-<% end %>
-<% if admin_signed_in? == false %>
-<p><%= link_to "Login as Admin", new_admin_session_path %></p>
+<p><%= link_to image_tag("logoutmenu.png"), destroy_user_session_path %></p> 
 <% end %>
 <% if admin_signed_in? %>
 <p><%= link_to "Logout as Admin", destroy_admin_session_path %></p>
+AAAA
 <% end %>
 </div>

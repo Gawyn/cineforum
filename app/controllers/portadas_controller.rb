@@ -1,9 +1,8 @@
 class PortadasController < ApplicationController
   def index
-    	@enquestas = Enquesta.all
-	@posts = Post.all
-	@sessios= Sessio.all
-	@total=@enquestas+@posts+@sessios
+	@sesions= Sesion.all
+	@noticias= Noticia.all
+	@total=@noticias+@sesions
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @films }

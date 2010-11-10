@@ -1,0 +1,48 @@
+/* main vertical scroll */
+
+
+	#mainscroll {
+		position:relative;
+		overflow:hidden;
+		height: 550px;
+	}
+	
+	/* root element for pages */
+	#pages {
+		position:absolute;
+		height:20000em;
+	}
+	
+	/* single page */
+	.page {
+		padding-left:0px;
+		height: 550px;
+		background:#BBB;
+		width:680px;
+	}
+	
+	/* root element for horizontal scrollables */
+	.scrollable {
+		position:relative;
+		overflow:hidden;
+		width: 680px;
+		height: 550px;
+	}
+	
+	/* root element for scrollable items */
+	.scrollable .items {
+		width:20000em;
+		position:absolute;
+		clear:both;
+	}
+	
+	/* single scrollable item */
+	.item {
+		float:left;
+		cursor:pointer;
+		width:680px;
+		height:550px;
+		padding-left: 0px;
+	}
+	
+	

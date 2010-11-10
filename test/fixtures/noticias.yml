@@ -2,12 +2,8 @@
 
 one:
   title: MyString
-  director: MyString
-  year: 1
-  country: MyString
+  body: MyText
 
 two:
   title: MyString
-  director: MyString
-  year: 1
-  country: MyString
+  body: MyText

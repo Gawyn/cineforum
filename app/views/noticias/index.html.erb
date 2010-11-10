@@ -1,0 +1,30 @@
+<br><br>
+<div id="demo"> 
+		<% i=1 %>
+		<table align="center">
+		<tr>
+		<% @noticias.each do |e| %>
+			<td><%= link_to image_tag(e.image.url, :title => '<i>'+e.title+'</i>', :size => "300x200"), e %><br>
+<% if admin_signed_in? %><%= link_to 'Destroy', e, :method => :delete, :confirm => "Are you sure?" %>
+<% else %>
+<br>
+<% end %>
+</td>		
+  				<% if i==2 %>
+				</tr>
+				<tr>
+  				<% i=0 %>
+				<% end %>
+			<% i=i+1 %>
+		<% end %>
+		</tr>
+		</table>
+</div>
+<% if admin_signed_in? %>
+<%= link_to 'New Noticia', new_noticia_path %>
+<% end %>
+
+
+<script> 
+$("#demo img[title]").tooltip();
+</script> 

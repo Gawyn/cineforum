@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-	#before_filter :authenticate_admin!, :except => [:sign_in, :sign_out, :sign_up]
+	before_filter :authenticate_admin!, :except => [:sign_in, :sign_out, :sign_up]
   uses_tiny_mce :options => {
                               :theme => 'advanced',
                               :plugins => %w{ table fullscreen }
@@ -71,18 +71,6 @@ class UsersController < ApplicationController
         format.html { render :action => "edit" }
         format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
       end
-    end
-  end
-
-  # DELETE /users/1
-  # DELETE /users/1.xml
-  def destroy
-    @user = User.find(params[:id])
-    @user.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(users_url) }
-      format.xml  { head :ok }
     end
   end
 end

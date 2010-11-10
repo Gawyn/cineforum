@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100921153633) do
+ActiveRecord::Schema.define(:version => 20101125143953) do
 
   create_table "admins", :force => true do |t|
     t.string   "name"
@@ -40,27 +40,25 @@ ActiveRecord::Schema.define(:version => 20100921153633) do
     t.string   "user_id"
   end
 
-  create_table "enquestas", :force => true do |t|
+  create_table "films", :force => true do |t|
     t.string   "title"
-    t.text     "body"
+    t.string   "director"
+    t.integer  "year"
+    t.string   "country"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "films", :force => true do |t|
+  create_table "noticias", :force => true do |t|
     t.string   "title"
-    t.string   "director"
-    t.string   "actors"
-    t.integer  "year"
-    t.string   "country"
     t.text     "body"
-    t.integer  "vots"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "portada"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "portadas", :force => true do |t|
@@ -68,19 +66,16 @@ ActiveRecord::Schema.define(:version => 20100921153633) do
     t.datetime "updated_at"
   end
 
-  create_table "posts", :force => true do |t|
+  create_table "sesions", :force => true do |t|
     t.string   "title"
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "sessios", :force => true do |t|
-    t.string   "title"
-    t.text     "body"
-    t.date     "data"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.boolean  "portada"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "users", :force => true do |t|
