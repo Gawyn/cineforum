@@ -2,7 +2,7 @@
 	#mainscroll {
 		position:relative;
 		overflow:hidden;
-		height:520px;
+		height:500px;
 	}
 	
 	/* root element for pages */
@@ -14,7 +14,7 @@
 	/* single page */
 	.page {
 		padding-left:0px;
-		height:520px;
+		height:500px;
 		background:#BBB;
 		width:900px;
 	}
@@ -24,7 +24,7 @@
 		position:relative;
 		overflow:hidden;
 		width:900px;
-		height:520px;
+		height:500px;
 	}
 	
 	/* root element for scrollable items */
@@ -39,7 +39,7 @@
 		float:left;
 		cursor:pointer;
 		width:900px;
-		height:520px;
+		height:500px;
 		padding-left: 0px;
 	}
 	
