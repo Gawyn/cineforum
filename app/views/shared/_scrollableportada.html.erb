@@ -2,21 +2,6 @@
 <div id="mainscroll">
 	<!-- root element for pages -->
 	<div id="pages">
-		<% @sesions.each do |e| %>
-			<div class="page">
-				<div class="scrollable">
-					<div class="items">
-						<div class="item">
-							<%= link_to image_tag(e.image.url), e %>			
-							<br><br><strong>
-				<center><span style="font-size:17px;" ><%= e.title %></span></center>
-							</strong>
-						</div>
-					</div>
-				</div>
-			</div>
-		<% end %>
-
 		<% @noticias.each do |a| %>
 			<div class="page">
 				<div class="scrollable">
@@ -32,6 +17,23 @@
 				</div>
 			</div>
 		<% end %>
+
+		<% @sesions.each do |e| %>
+			<div class="page">
+				<div class="scrollable">
+					<div class="items">
+						<div class="item">
+							<%= link_to image_tag(e.image.url), e %>			
+							<br><br><strong>
+				<center><span style="font-size:17px;" ><%= e.title %></span></center>
+							</strong>
+						</div>
+					</div>
+				</div>
+			</div>
+		<% end %>
+
+
 
 	</div>
 
