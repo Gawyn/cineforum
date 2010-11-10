@@ -7,7 +7,7 @@ class NoticiasController < ApplicationController
                               :plugins => %w{ table fullscreen }
                             }
   def index
-    @noticias = Noticia.all
+	@noticias= Noticia.find(:all, :order => "created_at DESC")
 
     respond_to do |format|
       format.html # index.html.erb

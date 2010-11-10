@@ -7,7 +7,7 @@ class SesionsController < ApplicationController
                               :plugins => %w{ table fullscreen }
                             }
   def index
-    @sesions = Sesion.all
+	@sesions= Sesion.find(:all, :order => "created_at DESC")
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @sesions }
