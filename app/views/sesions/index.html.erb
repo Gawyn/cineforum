@@ -5,7 +5,7 @@
 		<table align="center">
 		<tr>
 		<% @sesions.each do |e| %>
-			<td><%= link_to image_tag(e.image.url, :title => '<strong>'+e.title+'<i>('+raw(e.datasesion)+')</i></strong>', :size => "450x225"), e %><br>
+			<td><%= link_to image_tag(e.image.url, :title => '<strong>'+e.title+' <i>('+raw(e.datasesion)+')</i></strong>', :size => "450x225"), e %><br>
 <% if admin_signed_in? %><%= link_to 'Destroy', e, :method => :delete, :confirm => "Are you sure?" %>
 <% else %>
 <br>
