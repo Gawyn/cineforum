@@ -30,15 +30,14 @@
 	padding-left:30px;
 	padding-right:30px;
 	background-color: #BBB;
-	width: 700px;
+	width: 900px;
 }
 #cuerpogeneral
 {
 	overflow: hidden;
 	height:100%;
-	float:left;
-	padding-left:30px;
-	padding-right:30px;
+	padding-left:100px;
+	padding-right:100px;
 	background-color: #BBB;
 	width: 700px;
 }
