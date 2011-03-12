@@ -22,6 +22,16 @@
 	right:0px;
 	background-color: #000;
 }
+#cajacuerpo
+{
+	overflow: hidden;
+	height:100%;
+	float:left;
+	padding-left:30px;
+	padding-right:30px;
+	background-color: #BBB;
+	width: 700px;
+}
 #cuerpogeneral
 {
 	overflow: hidden;
